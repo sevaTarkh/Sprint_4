@@ -55,3 +55,22 @@ class BooksCollector:
     # получаем список Избранных книг
     def get_list_of_favorites_books(self):
         return self.favorites
+
+
+biblioteka = BooksCollector()
+
+book_1_name = 'Война и мир'
+book_2_name = 'Война и мир123'
+book_3_name = 'Мертвые души'
+
+book_genre = 'Фантастика'
+book_1_genre = 'Ужасы'
+book_2_genre = 'Комедии'
+
+biblioteka.add_new_book(book_1_name)
+biblioteka.set_book_genre(book_1_name, book_genre)
+biblioteka.add_new_book(book_2_name)
+biblioteka.set_book_genre(book_2_name, book_2_genre)
+biblioteka.add_new_book(book_3_name)
+biblioteka.set_book_genre(book_3_name, book_2_genre)
+print(biblioteka.get_books_genre())
